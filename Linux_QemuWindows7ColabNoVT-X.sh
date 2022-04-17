@@ -1,7 +1,8 @@
-wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/null 2>&1
-unzip ngrok-stable-linux-amd64.zip > /dev/null 2>&1
+wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
+tar xf ngrok-v3-stable-linux-amd64.tgz
+chmod +x ngrok
 read -p "Paste authtoken here (Copy and Ctrl+V to paste then press Enter): " CRP
-./ngrok authtoken $CRP 
+ngrok config add-authtoken 1lvbMEFO6r2uj8JDRnIoXrAxA20_87gxFUcUqyg2pPNFQ4u9s
 nohup ./ngrok tcp 5900 &>/dev/null &
 echo Please wait for installing...
 echo "Installing QEMU (2-3m)..."
